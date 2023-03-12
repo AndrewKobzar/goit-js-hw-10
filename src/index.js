@@ -14,7 +14,7 @@ console.log(searchBox.value);
 searchBox.addEventListener('input', debounce(onInputCountry, DEBOUNCE_DELAY));
 
 function onInputCountry() {
-  const countryName = searchBox.value;
+  const countryName = searchBox.value.trim();
   if (countryName === '') {
     countryInfo.innerHTML = '';
     countryList.innerHTML = '';
